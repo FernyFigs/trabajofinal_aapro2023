@@ -1,0 +1,396 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  position: sticky;
+  top: 0px;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background-color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+.fdminicio {
+  justify-content: center;
+  display: block;
+  margin: auto;
+  width: 550px;
+  padding-top: 0em;
+  padding-bottom: 1em;
+  max-width: 100%;
+}
+
+.imganimate {
+  cursor: none;
+  width: 550px;
+  border-radius: 8px;
+  filter: drop-shadow(0);
+}
+
+.imganimate:hover {
+  filter: drop-shadow(5px 5px 5px rgb(158, 158, 158));
+  transform: scale(0.9);
+  transition: all 300ms;
+}
+
+footer {
+  margin-top: auto;
+  text-align: center;
+  font-size: smaller;
+  font-family: "Roboto", sans-serif;
+}
+
+.logocabecera {
+  justify-content: center;
+  width: 600px;
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  height: auto;
+  padding-right: 1em;
+  padding-left: 1em;
+  padding-bottom: 1em;
+  width: auto\9;
+}
+
+/*botones y links*/
+nav {
+  position: relative;
+  background-color: #ffffff;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+ul {
+  padding: 0rem;
+  display: flex;
+  gap: 1rem;
+}
+
+li {
+  list-style-type: none;
+
+  padding: 3px;
+  background: #ffffff;
+  border-radius: 4px;
+}
+
+a {
+  font-size: x-small;
+  color: #000000;
+  text-decoration: none;
+}
+
+li:hover {
+  transform: translateY(-2px);
+  transition: all 300ms;
+}
+
+a:hover {
+  transform: scale(0.9);
+  transition: all 300ms;
+}
+
+div {
+  padding: 0.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  padding: 10px;
+  width: 100%;
+  z-index: 1000;
+}
+
+.Container {
+  margin: 0 10px;
+}
+
+.Container:hover {
+  transform: scale(1.5);
+  transition: all 300ms;
+}
+
+.fa-xl {
+  font-size: 24px;
+  color: black;
+}
+
+/*menu desplegable*/
+.menu-toggle {
+  position: relative;
+  z-index: 1000;
+  display: none; /* Oculta el botón por defecto */
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Muestra el botón en pantallas pequeñas */
+  }
+
+  ul {
+    display: none; /* Oculta la lista en pantallas pequeñas */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    width: 100%;
+    padding: 100px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1002;
+  }
+
+  ul.active {
+    display: flex; /* Muestra la lista cuando se activa */
+  }
+
+  li {
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  .social-links {
+    position: sticky;
+  }
+}
+
+/*BIOGRAFÍA*/
+
+.contenedorft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  text-align: center;
+  width: 100%;
+}
+section {
+  display: flex;
+  width: 350px;
+  height: 450px;
+  justify-content: center;
+}
+section img {
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: 0.5s ease;
+}
+
+section img:hover {
+  cursor: crosshair;
+  width: 100px;
+  opacity: 1;
+  filter: contrast(120%);
+}
+
+.textband {
+  text-align: justify;
+  width: 100%;
+  margin-top: 2rem;
+  padding-right: 3em;
+  padding-left: 3em;
+  padding-bottom: 2em;
+  max-width: 800px; /* Ancho máximo del texto */
+  margin: 0 auto; /* Centra horizontalmente */
+}
+
+.rama {
+  justify-content: center;
+  width: 200px;
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  height: auto;
+  padding-bottom: 5em;
+  width: auto\9;
+}
+
+@media (min-width: 768px) {
+  .contenedorft {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  section {
+    width: 50%;
+  }
+
+  .textband {
+    text-align: justify;
+    margin: auto;
+    width: 50%;
+  }
+}
+
+/*MÚSICA*/
+
+.containerep1 {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.containerep2 {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.music-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.textep {
+  text-align: justify;
+  width: 100%;
+}
+
+iframe {
+  border-radius: 12px;
+  width: 100%;
+}
+
+.epimg {
+  justify-content: center;
+  width: 600px;
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  height: auto;
+  width: auto\9;
+}
+
+@media (max-width: 768px) {
+  .music-section {
+    text-align: center;
+  }
+
+  .textep {
+    text-align: justify;
+  }
+}
+
+/*VIDEOS*/
+
+.video {
+  align-items: center;
+  margin: 30px auto;
+  width: 50%;
+  display: block;
+}
+
+h4 {
+  margin: 40px auto;
+  text-align: center;
+  width: 50%;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .video {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+/*GALERÍA*/
+
+.galeriacontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+/*CONTACTO*/
+
+.linkscontacto {
+  justify-content: center;
+  text-align: center;
+  margin: 1px 0; /* Agrega un margen superior e inferior */
+}
+
+.linkscontacto a {
+  justify-content: center;
+  display: inline-block;
+  margin: 1px;
+  font-size: small;
+  color: #000000;
+  text-decoration: none;
+}
+
+.formulario {
+  border: #fff;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: small;
+}
+
+.boton {
+  list-style-type: none;
+  border: 1px solid #929292;
+  padding: 2px;
+  background: #ffffff;
+  border-radius: 4px;
+}
+
+.boton:hover {
+  transform: translateY(-2px);
+  box-shadow: -2px 2px #000000;
+  transition: all 300ms;
+}
+
+.pdf {
+  justify-content: center;
+  margin: 0px;
+  font-size: x-small;
+  color: #000000;
+  text-decoration: none;
+}
+
+.mail {
+  text-decoration: wavy;
+  color: rgb(0, 0, 0);
+  font-size: small;
+}
+
+.mail:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 2px #000000;
+  transition: all 300ms;
+}
